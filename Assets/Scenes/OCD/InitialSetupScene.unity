@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a850a3279bce3a4c81baef41f0dff44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: Scene_1
+  _sceneName: Scene 1
   _cooldown: 0.1
 --- !u!1 &1963424921
 GameObject:
