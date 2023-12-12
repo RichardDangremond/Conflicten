@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outro.unity
     guid: cd18fa698d52ab5439b0079ad9767dff
+  - enabled: 1
+    path: Assets/Scenes/testscene1marloes.unity
+    guid: 9caa569aa5c8ffa458b6878dbff4bb58
+  - enabled: 1
+    path: Assets/Scenes/testscene2marloes.unity
+    guid: eed298a57672b4f49ac8baf46a6045c2
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: eceb1e8f39a96f44fae27ad3d24381d8,
       type: 2}
