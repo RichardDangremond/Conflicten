@@ -2146,7 +2146,7 @@ GameObject:
   - component: {fileID: 1595066457}
   - component: {fileID: 1595066456}
   - component: {fileID: 1595066455}
-  - component: {fileID: 1595066454}
+  - component: {fileID: 1595066458}
   m_Layer: 5
   m_Name: fade black
   m_TagString: Untagged
@@ -2173,20 +2173,6 @@ RectTransform:
   m_AnchoredPosition: {x: -248, y: -47}
   m_SizeDelta: {x: -92.42, y: -94.94}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1595066454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595066452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcfeef36a71f2fc4f91dbb7a329f8c47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1595066455}
-  levelToLoad: 0
 --- !u!95 &1595066455
 Animator:
   serializedVersion: 5
@@ -2246,6 +2232,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595066452}
   m_CullTransparentMesh: 1
+--- !u!114 &1595066458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595066452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9309b27079a633e4880a956c29aa624c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: Scene_2
 --- !u!1 &2055923710
 GameObject:
   m_ObjectHideFlags: 0
