@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene_2.unity
     guid: 41c2a6038f1cc3b4b8e2684abf4f1d20
   - enabled: 1
-    path: Assets/Scenes/Outro.unity
+    path: Assets/Scenes/OCD/Outro.unity
     guid: cd18fa698d52ab5439b0079ad9767dff
   - enabled: 1
     path: Assets/Scenes/testscene1marloes.unity
