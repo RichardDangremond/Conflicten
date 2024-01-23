@@ -1064,6 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: Scene_2
+  animator: {fileID: 0}
 --- !u!114 &904264569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,6 +1604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: Scene_3
+  animator: {fileID: 0}
 --- !u!114 &1052825951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,6 +2247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: Scene_2
+  animator: {fileID: 1595066455}
 --- !u!1 &2055923710
 GameObject:
   m_ObjectHideFlags: 0

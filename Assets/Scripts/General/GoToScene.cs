@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 
 public class GoToScene : MonoBehaviour
-    
+
 {
 
     //Load a scene based on a string name
@@ -13,17 +13,16 @@ public class GoToScene : MonoBehaviour
 
     public void LoadLevel()
     {
-    LevelManager.Instance.LoadLevel(_sceneName);
-     
-
+  
     }
-     public void QuitLevel()
+    public void QuitLevel()
     {
         Application.Quit();
-     
+
+
+
     }
 
 
 
 }
-
