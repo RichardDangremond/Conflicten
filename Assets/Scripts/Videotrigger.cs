@@ -19,19 +19,20 @@ public class VideoTrigger : MonoBehaviour
     [SerializeField]
     private VideoPlayer videoPlayer;
 
+ 
+
     // A boolean flag to track whether the video has been played
     private bool hasPlayed = false;
 
     // OnTriggerEnter is called when another collider enters the trigger collider of this GameObject
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log
-        // Check if the GameObject representing the film roll is in contact with the film hook attachment point
+        
+       
         if (other.gameObject.CompareTag("filmrol") && !hasPlayed)
         {
             
-            // If the film roll GameObject is in contact and the video hasn't been played yet
-            // Check if the attachment point for the film hook matches the entered GameObject
+       
          
             {
                 // If the film hook attachment point matches, play the video
@@ -44,6 +45,7 @@ public class VideoTrigger : MonoBehaviour
 
     // Method to handle video playback
     private void PlayVideo()
+   
     {
         // Check if the VideoPlayer component is assigned
         if (videoPlayer != null)
@@ -55,6 +57,8 @@ public class VideoTrigger : MonoBehaviour
             videoPlayer.Play();
         }
     }
+
+ 
 
     // Event handler for when the video reaches its end
     private void OnVideoEnd(VideoPlayer vp)

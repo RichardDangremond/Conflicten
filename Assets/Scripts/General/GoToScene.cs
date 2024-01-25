@@ -15,5 +15,7 @@ public class GoToScene : MonoBehaviour
     public void QuitLevel()
     {
         Application.Quit();
+
+        AudioManager.Instance.PlaySound("Test");
     }
 }
