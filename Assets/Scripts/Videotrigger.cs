@@ -27,8 +27,7 @@ public class VideoTrigger : MonoBehaviour
     // OnTriggerEnter is called when another collider enters the trigger collider of this GameObject
     private void OnTriggerEnter(Collider other)
     {
-        
-       
+        // Check if the GameObject representing the film roll is in contact with the film hook attachment point
         if (other.gameObject.CompareTag("filmrol") && !hasPlayed)
         {
             
