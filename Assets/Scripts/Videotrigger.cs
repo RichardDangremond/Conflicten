@@ -11,34 +11,29 @@ public class VideoTrigger : MonoBehaviour
     [SerializeField]
     private GameObject FilmHaakAttachpoint;
 
-    // Define a private variable to reference the GameObject representing the film roll
-    [SerializeField]
-    private GameObject filmrolVol;
-
     // Define a private variable to reference the VideoPlayer component for video playback
     [SerializeField]
     private VideoPlayer videoPlayer;
 
- 
-
-    // A boolean flag to track whether the video has been played
-    private bool hasPlayed = false;
+    private VideoClip _clip;
 
     // OnTriggerEnter is called when another collider enters the trigger collider of this GameObject
     private void OnTriggerEnter(Collider other)
     {
         // Check if the GameObject representing the film roll is in contact with the film hook attachment point
-        if (other.gameObject.CompareTag("filmrol") && !hasPlayed)
+        if (other.gameObject.CompareTag("filmrol"))
         {
             
        
          
-            {
-                // If the film hook attachment point matches, play the video
-                PlayVideo();
-                // Set the flag to true to indicate that the video has been played
-                hasPlayed = true;
-            }
+            
+                var filmRol = other.GetComponent<Filmrol>();
+                _clip = filmRol.clip;
+                if(!filmRol.hasPlayed)
+                {
+                    PlayVideo();
+                    filmRol.hasPlayed = true;
+                }
         }
     }
 
@@ -46,11 +41,15 @@ public class VideoTrigger : MonoBehaviour
     private void PlayVideo()
    
     {
+        Debug.Log("Playing video");
         // Check if the VideoPlayer component is assigned
         if (videoPlayer != null)
         {
-            // Add an event handler for when the video reaches its end
-            videoPlayer.loopPointReached += OnVideoEnd;
+            videoPlayer.clip = _clip;
+            videoPlayer.Prepare();
+            videoPlayer.Stop(); // Stop the video if it's playing
+            videoPlayer.time = 0f; // Set the playback time to zero
+            videoPlayer.Play(); // Play the video
 
             // Start playing the video
             videoPlayer.Play();
