@@ -6,51 +6,69 @@ public class Eventphone : MonoBehaviour
 
 
 {
-    [SerializeField] private GameObject audioManager;
-    [SerializeField] private int beltoon1Time = 420;
-    [SerializeField] private int beltoon2Time = 300;
-
-    private int currentTime = 0;
-    private int startTime = 450;
-    
+    [SerializeField] private int firstConversationTime = 5;
+    [SerializeField] private int secondConversationTime = 5;
+    [SerializeField] private AudioSource callSound;
+    [SerializeField] private AudioSource firstConversation;
+    [SerializeField] private AudioSource secondConversation;
 
 
-    // Start is called before the first frame update
+    private bool pickedUpFirstCall = false;
+    private bool pickedUpSecondCall = false;
+
+
     void Start()
     {
-        currentTime = startTime;
-        Invoke("Timeraftellen", 1);
+        // Start Call sound in firstConversationTime seconds
+        StartCoroutine(CallSoundCoroutine(firstConversationTime));
     }
-    // Update is called once per frame
-    void Update()
+
+    // Start call sound after the duration has reached firstConversationTime
+    private IEnumerator CallSoundCoroutine(int waitDuration)
     {
-       
-    }
-    private void Timeraftellen() 
-    {
-        currentTime -= 1;
-        if (currentTime >= 0)
-        {
-            Invoke("Timeraftellen", 1);
-            Debug.Log(currentTime);
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(waitDuration);
 
-           
-        }
-
-        if (currentTime == beltoon1Time)
-        {
-            Belgeluid1(); Debug.Log("2afspelen");
-        }
-
-
+        PlayCallSound();
     }
 
-    private void Belgeluid1()
+    private void PlayCallSound()
     {
         Debug.Log("afspelen");
-        audioManager.GetComponent<AudioManager>().PlayLongSound("AlarmClock");
-
+        callSound.Play();
     }
-        
+
+    // Called when the player answers  the phone
     
+    public void OntOnPlayerAnswer()
+
+    {
+            // The call sound must be playing when the player picked up the phone
+            if (callSound.isPlaying)
+        {
+            // Stop the calling sound
+            callSound.Stop();
+
+            // If the first pick up call sound has NOT played before
+            if (!pickedUpFirstCall)
+            {
+                // Play first convo
+                firstConversation.Play();
+
+                // Mark first call as answered
+                pickedUpFirstCall = true;
+
+                // Start Call sound in secondConversationTime seconds
+                StartCoroutine(CallSoundCoroutine(secondConversationTime));
+                return;
+            }
+
+            // The player has answered the first Call, but not the seccond
+            if (pickedUpFirstCall && !pickedUpSecondCall)
+            {
+                secondConversation.Play();
+                pickedUpSecondCall = true;
+            }
+        }
+    }
 }
