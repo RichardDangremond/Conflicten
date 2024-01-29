@@ -30,11 +30,11 @@ Transform:
   m_GameObject: {fileID: 5144527294580059454}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -15.155346, y: 15.700005, z: 0.029922724}
-  m_LocalScale: {x: 18, y: 15, z: 10}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 5.78, y: 12.34, z: 0.02}
+  m_LocalScale: {x: 18.6, y: 15.500001, z: 10.333334}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 725403319652069128}
+  m_Father: {fileID: 9066021729334700414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8023350650948713760
 MeshFilter:
@@ -788,7 +788,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FilmHaakAttachpoint: {fileID: 2485528570541872761}
-  filmrolVol: {fileID: 2352184192249620613}
   videoPlayer: {fileID: 3746599429957152747}
 --- !u!1 &2485528570541872761 stripped
 GameObject:
@@ -872,12 +871,12 @@ PrefabInstance:
     - target: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
         type: 3}
@@ -887,7 +886,17 @@ PrefabInstance:
     - target: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.2
+      value: 16.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7404563bcdf289a4abeb04139ad1cefc,
         type: 3}
@@ -902,18 +911,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7404563bcdf289a4abeb04139ad1cefc,
         type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 7726665948132805931}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7404563bcdf289a4abeb04139ad1cefc, type: 3}
---- !u!4 &725403319652069128 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1131699013787393635, guid: 7404563bcdf289a4abeb04139ad1cefc,
-    type: 3}
-  m_PrefabInstance: {fileID: 8816433746271719061}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9066021729334700414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7404563bcdf289a4abeb04139ad1cefc,
